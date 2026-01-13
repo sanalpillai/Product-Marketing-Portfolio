@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sanal Pillai – Product Marketing & Growth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Senior Product Marketing and Growth professional across B2B SaaS, marketplaces, HealthTech, and consumer platforms." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-alt: #0c0f18;
+      --accent: #ffde59;
+      --accent-soft: rgba(255, 222, 89, 0.1);
+      --text: #f7f7f7;
+      --muted: #a4a7b3;
+      --border: #1f2230;
+      --card: #0b0e16;
+      --radius: 12px;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      --max-width: 1040px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-main);
+      background: radial-gradient(circle at top, #111827 0, #020309 55%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    header .id-block {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    header h1 {
+      font-size: 1.9rem;
+      margin: 0;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .tag {
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      backdrop-filter: blur(10px);
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(15,23,42,0.7);
+    }
+    main { display: flex; flex-direction: column; gap: 36px; }
+
+    section {
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top left, rgba(255,222,89,0.06), transparent 55%),
+                  linear-gradient(145deg, #020617, #020309);
+      padding: 24px 20px 22px;
+    }
+    section.alt {
+      background: linear-gradient(145deg, var(--bg-alt), #020309);
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      margin-bottom: 18px;
+    }
+    .section-header h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .section-header span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    p.lead {
+      font-size: 0.96rem;
+      color: #e5e7eb;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    p.small {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+    .pill {
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--muted);
+    }
+
+    .grid-2 {
+      display: grid;
+      gap: 18px;
+    }
+    @media (min-width: 880px) {
+      .grid-2 {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      }
+    }
+
+    .case-card {
+      border-radius: var(--radius);
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      background: radial-gradient(circle at top, rgba(148,163,184,0.12), transparent 55%),
+                  #020617;
+      padding: 16px 14px 14px;
+    }
+    .case-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .case-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+    .case-meta {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+    .case-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-top: 6px;
+      margin-bottom: 2px;
+    }
+    ul {
+      margin: 4px 0 6px 18px;
+      padding: 0;
+      font-size: 0.87rem;
+      color: var(--muted);
+    }
+    ul li + li { margin-top: 4px; }
+
+    .metric-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .metric {
+      border-radius: 10px;
+      border: 1px solid rgba(248, 250, 252, 0.08);
+      padding: 6px 10px;
+      background: rgba(15,23,42,0.9);
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .metric span:first-child {
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .metric span:last-child {
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .link-card {
+      border-radius: var(--radius);
+      border: 1px dashed rgba(148, 163, 184, 0.4);
+      padding: 10px 12px;
+      font-size: 0.83rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: rgba(15, 23, 42, 0.85);
+    }
+    .link-card span {
+      color: var(--muted);
+    }
+    .link-card a {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 222, 89, 0.7);
+      background: rgba(255, 222, 89, 0.06);
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="id-block">
+        <h1>Sanal Pillai</h1>
+        <p>Senior Product Marketing & Growth · B2B SaaS · Marketplaces · HealthTech · Consumer</p>
+        <div class="tags">
+          <span class="tag">Product Marketing</span>
+          <span class="tag">SEO & Acquisition</span>
+          <span class="tag">PLG & Experiments</span>
+          <span class="tag">Content & Creative</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#gtm">GTM & Messaging</a>
+        <a href="#content">Content & Graphics</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Overview -->
+      <section id="overview">
+        <div class="section-header">
+          <h2>Overview</h2>
+          <span>Product marketing, growth & creative</span>
+        </div>
+        <p class="lead">
+          Senior Product Marketing and Growth professional with experience across B2B SaaS, marketplaces, HealthTech, and consumer platforms. 
+          Strengths include GTM strategy, SEO-led acquisition, positioning, experimentation, and cross-functional execution.
+        </p>
+        <p class="small">
+          Treats growth channels and launches as products with clear ownership, metrics, and roadmaps, while balancing narrative, data, and hands-on execution.
+        </p>
+        <div class="pill-row">
+          <span class="pill">GTM strategy & launches</span>
+          <span class="pill">Positioning & narrative</span>
+          <span class="pill">SEO / AEO / GEO</span>
+          <span class="pill">Lifecycle & demand gen</span>
+          <span class="pill">Experimentation & A/B testing</span>
+          <span class="pill">Executive reporting</span>
+          <span class="pill">Cross-functional leadership</span>
+        </div>
+      </section>
+
+      <!-- Case Studies -->
+      <section id="case-studies" class="alt">
+        <div class="section-header">
+          <h2>Case Studies</h2>
+          <span>Selected work across companies</span>
+        </div>
+
+        <div class="grid-2">
+          <!-- Case 1 -->
+          <article class="case-card">
+            <div class="case-top">
+              <div>
+                <div class="case-title">SEO-Led Acquisition as a Product Growth Engine</div>
+                <div class="case-meta">Impact Guru · HealthTech · Crowdfunding</div>
+              </div>
+              <span class="case-meta">SEO · Growth</span>
+            </div>
+            <div class="case-label">Problem</div>
+            <ul>
+              <li>Organic acquisition under-leveraged with fragmented SEO and no revenue ownership.</li>
+            </ul>
+            <div class="case-label">Strategy</div>
+            <ul>
+              <li>Reframed SEO as a product growth channel with clear metrics and experimentation roadmap.</li>
+            </ul>
+            <div class="case-label">Execution</div>
+            <ul>
+              <li>Owned end-to-end SEO strategy across technical, content, and experimentation.</li>
+              <li>Partnered with engineering on architecture, indexing, and performance.</li>
+              <li>Built and led SEO, SEM, and content teams, coordinating 50+ contributors.</li>
+              <li>Implemented weekly and monthly executive reporting tied to revenue forecasts.</li>
+            </ul>
+            <div class="metric-row">
+              <div class="metric">
+                <span>400%+</span>
+                <span>Organic traffic growth.</span>
+              </div>
+              <div class="metric">
+                <span>$240K+/month</span>
+                <span>SEO-led revenue within four months.</span>
+              </div>
+              <div class="metric">
+                <span>Board-level</span>
+                <span>SEO adopted as core GTM pillar.</span>
+              </div>
+            </div>
+            <p class="small">
+              Key learning: SEO performs best when treated as a product with ownership, experiment velocity, and revenue accountability.
+            </p>
+          </article>
+
+          <!-- Case 2 -->
+          <article class="case-card">
+            <div class="case-top">
+              <div>
+                <div class="case-title">Multi-Client GTM & Growth Enablement</div>
+                <div class="case-meta">Avanzar Health / GX Partners · 40+ clients</div>
+              </div>
+              <span class="case-meta">GTM · Consulting</span>
+            </div>
+            <div class="case-label">Problem</div>
+            <ul>
+              <li>Clients lacked clear positioning, consistent messaging, and alignment between channels and conversion.</li>
+            </ul>
+            <div class="case-label">Strategy</div>
+            <ul>
+              <li>Standardized GTM frameworks across SEO, SEM, and content, tied to ICPs, funnels, and outcomes.</li>
+            </ul>
+            <div class="case-label">Execution</div>
+            <ul>
+              <li>Led GTM and growth programs across 40+ healthcare, ecommerce, and marketplace clients.</li>
+              <li>Defined positioning and messaging frameworks aligned to search intent and buyer stages.</li>
+              <li>Owned analytics, dashboards, and executive-ready reporting.</li>
+              <li>Acted as escalation point for delivery quality and performance.</li>
+            </ul>
+            <div class="metric-row">
+              <div class="metric">
+                <span>40%+ ARR</span>
+                <span>Growth for key client accounts.</span>
+              </div>
+              <div class="metric">
+                <span>Consistent</span>
+                <span>Traffic, ranking, and CTR uplift across programs.</span>
+              </div>
+            </div>
+            <p class="small">
+              Key learning: Positioning and GTM discipline matter as much as channel execution, especially at scale.
+            </p>
+          </article>
+
+          <!-- Case 3 -->
+          <article class="case-card">
+            <div class="case-top">
+              <div>
+                <div class="case-title">Product-Led Growth & Experimentation</div>
+                <div class="case-meta">METY Tech · SaaS</div>
+              </div>
+              <span class="case-meta">PLG · Onboarding</span>
+            </div>
+            <div class="case-label">Problem</div>
+            <ul>
+              <li>Low trial-to-paid conversion and unclear onboarding activation signals.</li>
+            </ul>
+            <div class="case-label">Strategy</div>
+            <ul>
+              <li>Applied PLG principles to onboarding, messaging, and activation triggers.</li>
+            </ul>
+            <div class="case-label">Execution</div>
+            <ul>
+              <li>Partnered with product and engineering to map activation events.</li>
+              <li>Ran A/B tests on onboarding copy, flows, and feature prompts.</li>
+              <li>Used behavioral analytics to refine lifecycle messaging.</li>
+            </ul>
+            <div class="metric-row">
+              <div class="metric">
+                <span>+18%</span>
+                <span>Improvement in trial-to-paid activation.</span>
+              </div>
+              <div class="metric">
+                <span>More PQLs</span>
+                <span>Through clearer value communication.</span>
+              </div>
+            </div>
+            <p class="small">
+              Key learning: Product marketing is most effective when embedded directly into the product experience.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- GTM, Messaging & Enablement -->
+      <section id="gtm">
+        <div class="section-header">
+          <h2>GTM, Messaging & Enablement</h2>
+          <span>Launches, battlecards, and pricing</span>
+        </div>
+        <div class="grid-2">
+          <div>
+            <p class="lead">Impact Guru – SEO as a Core GTM Motion</p>
+            <p class="small">Objective: Establish organic acquisition as a primary GTM channel with revenue accountability alongside paid and partnerships.</p>
+            <ul>
+              <li>Defined ICPs and mapped search intent to funnel stages.</li>
+              <li>Positioned SEO as demand capture and education, not just traffic.</li>
+              <li>Aligned content, landing pages, and flows to fundraising outcomes.</li>
+            </ul>
+            <p class="small">
+              Phased approach: technical foundation → scalable healthcare content → conversion optimization & experimentation → executive reporting and forecasting.
+            </p>
+          </div>
+          <div>
+            <p class="lead">Sales Enablement & Battlecards</p>
+            <ul>
+              <li>Built battlecards, objection-handling guides, and competitive narratives for sales and partnerships.</li>
+              <li>Standardized positioning across marketing, sales, and exec stakeholders.</li>
+              <li>Improved sales consistency and confidence in enterprise/partnership conversations.</li>
+            </ul>
+            <p class="small">
+              Pricing influence: reframed conversations around net funds raised and time saved, reducing pricing objections and improving close confidence.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 18px;">
+          <div>
+            <p class="lead">Industry Messaging – Healthcare</p>
+            <ul>
+              <li>ICP: Hospital administrators, care coordinators, NGO operators.</li>
+              <li>Pain points: slow fundraising cycles, limited reach, operational overhead.</li>
+              <li>Core message: raise more funds, faster, with built-in distribution and healthcare expertise.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="lead">Ecommerce & Fintech</p>
+            <ul>
+              <li>Ecommerce: turn organic acquisition into a predictable growth engine tied directly to revenue.</li>
+              <li>Fintech: align positioning, content, and acquisition to intent and lifecycle to overcome trust and complexity barriers.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content & Graphic Work -->
+      <section id="content" class="alt">
+        <div class="section-header">
+          <h2>Content & Graphic Portfolio</h2>
+          <span>YouTube, product imagery, ad creatives</span>
+        </div>
+
+        <p class="lead">
+          Blends product marketing and analytics with hands-on content creation across YouTube, product imagery, ads, and social media.
+        </p>
+
+        <div class="grid-2">
+          <div>
+            <h3 style="font-size:0.9rem;margin:10px 0 4px;">About this work</h3>
+            <p class="small">
+              Dynamic Product Manager and Data Analyst background with experience creating content and social media strategy for brands like Bombay Shirt Company and leading product and marketing at ImpactGuru.
+            </p>
+            <p class="small">
+              Grew a personal YouTube channel to 1K+ subscribers and 400K+ views, combining visual storytelling, data-driven experimentation, and performance-focused creatives.
+            </p>
+
+            <div style="margin-top:12px;">
+              <div class="link-card" style="margin-bottom:10px;">
+                <span>YouTube video & thumbnail samples, edited content, and reels.</span>
+                <a href="https://drive.google.com/drive/folders/1qnF0w_8PKll9nVHYEW4WGLhAnV1MR8gl?usp=sharing" target="_blank" rel="noreferrer">View YouTube & Reels</a>
+              </div>
+              <div class="link-card" style="margin-bottom:10px;">
+                <span>Product imagery and creative for ecommerce and performance campaigns.</span>
+                <a href="https://drive.google.com/drive/folders/1CGAbm9bKpmbAYzJ80IzFjwUuGHtOfOdQ?usp=sharing" target="_blank" rel="noreferrer">View Product Samples</a>
+              </div>
+              <div class="link-card" style="margin-bottom:10px;">
+                <span>Ad creative samples across formats and funnels.</span>
+                <a href="https://drive.google.com/drive/folders/1BhBKa2KzcJxBZ8eWCXsi-SjdWFby1Ga2?usp=sharing" target="_blank" rel="noreferrer">View Ad Creatives</a>
+              </div>
+              <div class="link-card">
+                <span>Full graphic and media portfolio.</span>
+                <a href="https://drive.google.com/drive/folders/1mI5Za33s14oMwNhJbgHtw3sOiCP2t979?usp=drive_link" target="_blank" rel="noreferrer">Open Full Portfolio</a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="font-size:0.9rem;margin:10px 0 4px;">Content, Media & Distribution</h3>
+            <ul>
+              <li>Built and scaled content and YouTube-led growth channels generating $4K+ in monthly revenue.</li>
+              <li>Hands-on visuals, thumbnails, media assets, and video editing using Canva and related tools.</li>
+              <li>Strong understanding of how content, distribution, and messaging compound over time.</li>
+            </ul>
+
+            <h3 style="font-size:0.9rem;margin:12px 0 4px;">Tools & stack</h3>
+            <div class="pill-row">
+              <span class="pill">Google Analytics</span>
+              <span class="pill">Search Console</span>
+              <span class="pill">Looker / Data Studio</span>
+              <span class="pill">Semrush</span>
+              <span class="pill">Ahrefs</span>
+              <span class="pill">Screaming Frog</span>
+              <span class="pill">Canva</span>
+              <span class="pill">Figma</span>
+              <span class="pill">SQL (basic)</span>
+              <span class="pill">A/B testing platforms</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End-to-end PMM ownership -->
+      <section class="alt">
+        <div class="section-header">
+          <h2>End-to-End PMM Ownership</h2>
+          <span>How I typically operate</span>
+        </div>
+        <p class="lead">
+          Owns the full PMM lifecycle from market understanding to GTM, enablement, experimentation, and executive reporting.
+        </p>
+        <ul>
+          <li>Market and user understanding, ICPs, and intent mapping.</li>
+          <li>Positioning, messaging, and narrative development across segments.</li>
+          <li>GTM planning and launches across SEO, SEM, content, and lifecycle.</li>
+          <li>Sales enablement and pricing narratives aligned to revenue outcomes.</li>
+          <li>Distribution, experimentation, and ongoing optimization.</li>
+          <li>Executive communication, reporting, and roadmap influence.</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <span>Let’s talk</span>
+        </div>
+        <p class="lead">
+          Open to roles and projects in product marketing, growth, and GTM where SEO, experimentation, and clear storytelling drive measurable business outcomes.
+        </p>
+        <p class="small">
+          Email: <a href="mailto:pillai.sa@northeastern.edu">pillai.sa@northeastern.edu</a><br />
+          Phone: +1 857-693-9118<br />
+          LinkedIn: <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">Add your LinkedIn URL here</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Sanal Pillai · Product Marketing & Growth
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
