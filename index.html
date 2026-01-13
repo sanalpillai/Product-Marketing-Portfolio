@@ -4,953 +4,472 @@
   <meta charset="UTF-8" />
   <title>Sanal Pillai – Product Marketing & Growth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Senior Product Marketing and Growth portfolio – SEO, GTM, PLG, and design-led experimentation across B2B SaaS, marketplaces, HealthTech, and consumer platforms." />
-
-  <!-- Fonts & reset -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg: #050816;
-      --bg-alt: #050815;
-      --surface: rgba(10, 16, 33, 0.96);
-      --surface-soft: rgba(15, 23, 42, 0.8);
-      --accent: #ffde59;
-      --accent-2: #f97316;
-      --accent-soft: rgba(255, 222, 89, 0.12);
-      --text: #f9fafb;
-      --muted: #9ca3af;
-      --border: rgba(148, 163, 184, 0.45);
-      --radius-xl: 28px;
-      --radius-lg: 22px;
-      --radius-md: 16px;
-      --radius-pill: 999px;
-      --shadow-soft: 0 30px 80px rgba(15, 23, 42, 0.95);
-      --max-width: 1160px;
-      --nav-height: 72px;
-      --blur: 22px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-      background:
-        radial-gradient(circle at 10% 0, rgba(56,189,248,0.16), transparent 55%),
-        radial-gradient(circle at 100% 0, rgba(244,63,94,0.16), transparent 55%),
-        radial-gradient(circle at 0 100%, rgba(52,211,153,0.12), transparent 55%),
-        #020617;
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .noise {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.16;
-      mix-blend-mode: soft-light;
-      background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-      z-index: 1;
-    }
-
-    .page {
-      position: relative;
-      z-index: 2;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 24px 20px 80px;
-    }
-
-    /* NAV */
-
-    .nav-shell {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(to bottom, rgba(2,6,23,0.94), rgba(2,6,23,0.72), transparent);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
-      margin: 0 -20px;
-    }
-
-    .nav {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 14px 20px 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .nav-logo {
-      width: 36px;
-      height: 36px;
-      border-radius: 16px;
-      background: conic-gradient(from 140deg, #facc15, #f97316, #ec4899, #22c55e, #facc15);
-      box-shadow: 0 12px 35px rgba(15,23,42,0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #020617;
-      font-size: 1.05rem;
-    }
-
-    .nav-title {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .nav-title span:first-child {
-      font-size: 0.98rem;
-      font-weight: 600;
-    }
-
-    .nav-title span:last-child {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 0.8rem;
-    }
-
-    .nav-link {
-      border-radius: var(--radius-pill);
-      padding: 6px 14px;
-      border: 1px solid rgba(148, 163, 184, 0.42);
-      color: var(--muted);
-      background: radial-gradient(circle at top left, rgba(148,163,184,0.2), rgba(15,23,42,0.96));
-      backdrop-filter: blur(14px);
-    }
-
-    .nav-link:hover {
-      border-color: var(--accent);
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    @media (max-width: 720px) {
-      .nav { flex-direction: column; align-items: flex-start; }
-      .nav-logo { width: 32px; height: 32px; }
-    }
-
-    /* HERO */
-
-    .hero {
-      margin-top: 40px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
-      gap: 26px;
-      align-items: center;
-    }
-
-    @media (max-width: 880px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .hero-text {
-      padding-right: 10px;
-    }
-
-    .hero-eyebrow {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .hero-eyebrow::before {
-      content: "";
-      width: 38px;
-      height: 1px;
-      background: linear-gradient(to right, rgba(148,163,184,0.5), transparent);
-    }
-
-    .hero-title {
-      font-size: clamp(2.2rem, 3.3vw, 3rem);
-      line-height: 1.05;
-      margin: 0 0 12px;
-    }
-
-    .hero-title span.highlight {
-      background: linear-gradient(120deg, #facc15, #f97316, #ec4899, #22c55e);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-subtitle {
-      font-size: 0.96rem;
-      color: #e5e7eb;
-      max-width: 32rem;
-      margin-bottom: 14px;
-    }
-
-    .hero-meta {
-      font-size: 0.84rem;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    .btn-primary {
-      border-radius: var(--radius-pill);
-      padding: 9px 20px;
-      font-size: 0.86rem;
-      font-weight: 500;
-      border: 0;
-      color: #020617;
-      background: radial-gradient(circle at 0 0, #facc15, #f97316 45%, #ec4899 85%);
-      box-shadow: 0 18px 50px rgba(15,23,42,0.96);
-    }
-
-    .btn-outline {
-      border-radius: var(--radius-pill);
-      padding: 9px 16px;
-      font-size: 0.86rem;
-      border: 1px solid rgba(148,163,184,0.65);
-      background: rgba(15,23,42,0.85);
-      color: var(--text);
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 6px;
-    }
-
-    .tag {
-      border-radius: var(--radius-pill);
-      padding: 5px 11px;
-      font-size: 0.74rem;
-      border: 1px solid rgba(148,163,184,0.45);
-      color: var(--muted);
-      background: rgba(15,23,42,0.92);
-      backdrop-filter: blur(16px);
-    }
-
-    .hero-media {
-      position: relative;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      min-height: 280px;
-      background: radial-gradient(circle at top left, #1e293b, #020617 60%);
-      padding: 16px;
-      display: grid;
-      grid-template-rows: 1.2fr 1fr;
-      gap: 10px;
-      isolation: isolate;
-    }
-
-    .hero-media::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 0 0, rgba(250,204,21,0.32), transparent 55%),
-        radial-gradient(circle at 100% 0, rgba(248,113,113,0.32), transparent 55%),
-        radial-gradient(circle at 0 100%, rgba(45,212,191,0.25), transparent 55%);
-      mix-blend-mode: screen;
-      opacity: 0.9;
-      z-index: -1;
-    }
-
-    .hero-media-top {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 10px;
-      height: 100%;
-    }
-
-    .hero-screen-main,
-    .hero-screen-side {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      background: #020617;
-      border: 1px solid rgba(15,23,42,0.9);
-    }
-
-    .hero-screen-main {
-      background:
-        linear-gradient(to bottom, rgba(15,23,42,0.4), rgba(15,23,42,0.9)),
-        url("https://images.pexels.com/photos/6476584/pexels-photo-6476584.jpeg?auto=compress&cs=tinysrgb&w=1600")
-        center/cover no-repeat;
-    }
-
-    .hero-screen-side {
-      background:
-        linear-gradient(to bottom, rgba(15,23,42,0.35), rgba(15,23,42,0.95)),
-        url("https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200")
-        center/cover no-repeat;
-    }
-
-    .hero-screen-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(15,23,42,0.95), rgba(15,23,42,0.2));
-    }
-
-    .hero-screen-content {
-      position: absolute;
-      inset: 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: #e5e7eb;
-    }
-
-    .hero-metrics-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      font-size: 0.78rem;
-    }
-
-    .hero-metric {
-      border-radius: 14px;
-      padding: 8px 10px;
-      background: rgba(15,23,42,0.94);
-      border: 1px solid rgba(148,163,184,0.6);
-      color: var(--muted);
-    }
-
-    .hero-metric span.value {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--accent);
-    }
-
-    @media (max-width: 880px) {
-      .hero-media { padding: 14px; border-radius: 24px; }
-      .hero-media-top { grid-template-columns: 1fr; }
-      .hero-screen-main { min-height: 170px; }
-    }
-
-    /* GENERIC SECTION */
-
-    .section {
-      margin-top: 44px;
-      border-radius: var(--radius-xl);
-      padding: 24px 22px 20px;
-      background: radial-gradient(circle at top left, rgba(30,64,175,0.45), rgba(15,23,42,0.97));
-      border: 1px solid rgba(148,163,184,0.55);
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(var(--blur));
-    }
-
-    .section.alt {
-      background: radial-gradient(circle at top right, rgba(88,28,135,0.55), rgba(15,23,42,0.97));
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .section-label {
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.24em;
-      color: var(--muted);
-    }
-
-    .section-sub {
-      font-size: 0.86rem;
-      color: var(--muted);
-    }
-
-    .section h3 {
-      margin: 6px 0 4px;
-      font-size: 1rem;
-    }
-
-    .section p {
-      font-size: 0.9rem;
-      color: #e5e7eb;
-      margin: 0 0 8px;
-    }
-
-    .meta-small {
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    .grid-2 {
-      display: grid;
-      gap: 18px;
-    }
-
-    @media (min-width: 880px) {
-      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .pill {
-      border-radius: var(--radius-pill);
-      padding: 5px 11px;
-      font-size: 0.78rem;
-      border: 1px solid rgba(148,163,184,0.6);
-      color: var(--muted);
-      background: rgba(15,23,42,0.9);
-    }
-
-    /* CASE STUDIES */
-
-    .case-grid {
-      display: grid;
-      gap: 18px;
-    }
-    @media (min-width: 880px) {
-      .case-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    }
-
-    .case-card {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      position: relative;
-      background: #020617;
-      border: 1px solid rgba(148,163,184,0.7);
-      display: flex;
-      flex-direction: column;
-      min-height: 260px;
-    }
-
-    .case-image {
-      position: relative;
-      height: 130px;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .case-image::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(15,23,42,0.9), rgba(15,23,42,0.2));
-    }
-
-    .case-body {
-      padding: 12px 14px 12px;
-      position: relative;
-      flex: 1;
-    }
-
-    .case-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .case-meta {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    .case-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      margin-top: 8px;
-      margin-bottom: 2px;
-    }
-
-    .metric-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 8px;
-    }
-
-    .metric-chip {
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 0.78rem;
-      border: 1px solid rgba(248,250,252,0.25);
-      background: rgba(15,23,42,0.9);
-      color: var(--muted);
-    }
-
-    .metric-chip span.value {
-      color: var(--accent);
-      font-weight: 600;
-      margin-right: 4px;
-    }
-
-    ul {
-      margin: 4px 0 4px 18px;
-      padding: 0;
-      font-size: 0.85rem;
-      color: #d1d5db;
-    }
-
-    ul li + li { margin-top: 3px; }
-
-    /* VISUAL WORK STRIP */
-
-    .gallery-strip {
-      margin-top: 12px;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .gallery-item {
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-      height: 80px;
-      background-size: cover;
-      background-position: center;
-      border: 1px solid rgba(148,163,184,0.7);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(15,23,42,0.85), transparent);
-    }
-
-    .gallery-label {
-      position: absolute;
-      bottom: 8px;
-      left: 8px;
-      right: 8px;
-      font-size: 0.72rem;
-      color: #e5e7eb;
-    }
-
-    @media (max-width: 720px) {
-      .gallery-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    /* LINK CARDS */
-
-    .link-card {
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(148,163,184,0.65);
-      background: rgba(15,23,42,0.96);
-      padding: 11px 14px;
-      font-size: 0.86rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .link-card span {
-      color: var(--muted);
-    }
-
-    .link-card a {
-      border-radius: var(--radius-pill);
-      padding: 6px 12px;
-      border: 1px solid rgba(248,250,252,0.5);
-      text-decoration: none;
-      font-size: 0.8rem;
-      color: var(--text);
-      background: rgba(15,23,42,1);
-    }
-
-    .link-card a:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* FOOTER */
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-align: center;
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#0a0a0a;--card:#111;--border:rgba(255,255,255,0.1);--border-h:rgba(255,255,255,0.2);--text:#fff;--muted:#888;--dim:#444;--accent:#4ade80}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    .serif{font-family:'Playfair Display',serif;font-style:italic}
+    a{color:inherit;text-decoration:none}
+
+    /* Animations */
+    @keyframes float{0%,100%{transform:translateY(0) rotate(6deg)}50%{transform:translateY(-20px) rotate(6deg)}}
+    @keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+    @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    @keyframes draw{from{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
+    
+    .anim{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+    .anim.visible{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+    /* Swoosh Background */
+    .swoosh{position:absolute;top:0;left:0;right:0;height:100%;overflow:hidden;z-index:0}
+    .swoosh svg{position:absolute;width:200%;left:-50%;top:10%;opacity:.08}
+    .swoosh svg path{stroke:#fff;stroke-width:1;fill:none;stroke-dasharray:2000;animation:draw 4s ease-out forwards}
+
+    /* Nav */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 48px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(10,10,10,.98),transparent);animation:fadeUp .6s ease-out}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1.1rem}
+    .logo-icon{display:flex;gap:2px;padding:8px;background:var(--text);border-radius:8px}
+    .logo-icon span{width:5px;height:5px;background:var(--bg);border-radius:1px}
+    .nav-links{display:flex;gap:36px}
+    .nav-links a{color:var(--muted);font-size:.95rem;transition:color .3s}
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{display:flex;align-items:center;gap:8px;padding:10px 20px;border:1px solid var(--border);border-radius:30px;font-size:.9rem;transition:all .3s}
+    .nav-cta:hover{background:var(--card);border-color:var(--border-h)}
+    .nav-cta svg{width:16px;height:16px}
+    @media(max-width:900px){.nav-links{display:none}nav{padding:16px 24px}}
+
+    /* Hero */
+    .hero{min-height:100vh;display:flex;align-items:center;padding:140px 48px 100px;position:relative}
+    .hero-container{max-width:1300px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center}
+    .hero-content{position:relative;z-index:2}
+    .status{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;font-size:.9rem;color:var(--muted);animation:fadeUp .8s ease-out .2s both}
+    .status-dot{width:10px;height:10px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+    .hero h1{font-size:clamp(3rem,6vw,4.5rem);font-weight:400;line-height:1.05;margin-bottom:28px;animation:fadeUp .8s ease-out .3s both}
+    .hero h1 .serif{font-weight:400}
+    .hero-desc{font-size:1.05rem;color:var(--muted);max-width:500px;margin-bottom:36px;line-height:1.8;animation:fadeUp .8s ease-out .4s both}
+    .hero-btns{display:flex;gap:12px;margin-bottom:36px;animation:fadeUp .8s ease-out .5s both}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:40px;font-size:.95rem;font-weight:500;transition:all .3s}
+    .btn-primary{background:var(--text);color:var(--bg)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 40px rgba(255,255,255,.1)}
+    .btn-outline{border:1px solid var(--border-h);color:var(--text)}
+    .btn-outline:hover{background:var(--card);border-color:var(--muted)}
+    .btn svg{width:18px;height:18px}
+    .social{display:flex;align-items:center;gap:20px;animation:fadeUp .8s ease-out .6s both}
+    .social a{color:var(--dim);transition:color .3s}
+    .social a:hover{color:var(--text)}
+    .social svg{width:22px;height:22px}
+    .social-div{color:var(--dim)}
+
+    /* Hero Visual */
+    .hero-visual{position:relative;display:flex;justify-content:center;align-items:center;animation:fadeIn 1s ease-out .5s both}
+    .photo-card{position:relative;width:340px;height:420px;background:#f5f5f5;border-radius:24px;overflow:hidden;transform:rotate(6deg);animation:float 6s ease-in-out infinite;box-shadow:0 50px 100px rgba(0,0,0,.5)}
+    .photo-card img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%)}
+    .rotating-badge{position:absolute;top:-20px;right:-20px;width:120px;height:120px;animation:rotate 20s linear infinite}
+    .rotating-badge svg{width:100%;height:100%}
+    .rotating-badge svg text{fill:var(--muted);font-size:11px;letter-spacing:3px;text-transform:uppercase}
+    .stars-row{display:flex;align-items:center;gap:12px;margin-top:24px;justify-content:center;animation:fadeUp .8s ease-out .8s both}
+    .stars{color:#fbbf24;font-size:1.1rem;letter-spacing:2px}
+    .stars-text{color:var(--muted);font-size:.9rem}
+
+    /* Scroll */
+    .scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--dim);font-size:.75rem;animation:fadeUp 1s ease-out 1s both}
+    .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--dim),transparent)}
+
+    /* Sections */
+    section{padding:100px 48px;position:relative;z-index:1}
+    .container{max-width:1200px;margin:0 auto}
+    .sec-label{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;background:var(--card);border:1px solid var(--border);border-radius:30px;font-size:.8rem;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:20px}
+    .sec-label::before{content:'';width:6px;height:6px;background:var(--muted);border-radius:50%}
+    .sec-title{font-size:clamp(2.2rem,4vw,3rem);font-weight:400;margin-bottom:16px}
+    .sec-sub{color:var(--muted);font-size:.95rem}
+    .sec-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:48px}
+
+    /* Case Cards */
+    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .case-card{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all .4s cubic-bezier(.16,1,.3,1)}
+    .case-card:hover{border-color:var(--border-h);transform:translateY(-8px)}
+    .case-img{height:180px;background:linear-gradient(135deg,#1a1a1a,#0d0d0d);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .case-img svg{width:80px;height:80px;opacity:.3}
+    .case-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(74,222,128,.05),transparent 70%)}
+    .case-body{padding:24px}
+    .case-title{font-size:1.05rem;font-weight:600;margin-bottom:6px}
+    .case-meta{font-size:.8rem;color:var(--muted);margin-bottom:16px}
+    .case-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin:14px 0 6px}
+    .case-body ul{padding-left:18px;font-size:.85rem;color:#ccc}
+    .case-body li{margin-bottom:4px}
+    .metrics{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .metric{padding:8px 14px;background:var(--bg);border:1px solid var(--border);border-radius:20px;font-size:.75rem;color:var(--muted)}
+    .metric span{color:var(--accent);font-weight:600}
+    .case-note{font-size:.8rem;color:var(--dim);margin-top:14px;font-style:italic}
+
+    /* Content Section */
+    .content-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+    .content-block h3{font-size:1.2rem;font-weight:500;margin-bottom:16px}
+    .content-block p{font-size:.95rem;color:#ccc;line-height:1.8;margin-bottom:14px}
+    .link-cards{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+    .link-card{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:var(--card);border:1px solid var(--border);border-radius:14px;transition:all .3s}
+    .link-card:hover{border-color:var(--border-h);transform:translateX(4px)}
+    .link-card span{font-size:.85rem;color:var(--muted)}
+    .link-card a{padding:8px 16px;background:var(--bg);border:1px solid var(--border-h);border-radius:20px;font-size:.8rem;transition:all .3s}
+    .link-card a:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+    .gallery-item{height:100px;background:var(--card);border:1px solid var(--border);border-radius:14px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;transition:all .3s}
+    .gallery-item:hover{border-color:var(--border-h)}
+    .gallery-item svg{width:40px;height:40px;opacity:.3}
+    .gallery-item span{position:absolute;bottom:10px;left:14px;font-size:.7rem;color:var(--muted)}
+
+    /* Pills */
+    .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+    .pill{padding:8px 16px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:.8rem;color:var(--muted);transition:all .3s}
+    .pill:hover{border-color:var(--border-h);color:var(--text)}
+
+    /* PMM Section */
+    .pmm-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px}
+    .pmm-card h3{font-size:1.1rem;font-weight:500;margin:16px 0}
+    .pmm-card p{font-size:.95rem;color:#ccc;margin-bottom:16px}
+    .pmm-card ul{padding-left:20px;color:#ccc;font-size:.9rem}
+    .pmm-card li{margin-bottom:8px}
+
+    /* Marquee */
+    .marquee-wrap{padding:30px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;position:relative;z-index:1}
+    .marquee{display:flex;animation:marquee 25s linear infinite}
+    .marquee:hover{animation-play-state:paused}
+    .marquee span{display:flex;align-items:center;gap:12px;padding:0 28px;white-space:nowrap;color:var(--muted);font-size:.9rem}
+    .marquee span::before{content:'✦';color:var(--dim)}
+
+    /* Contact */
+    .contact{text-align:center;padding:120px 48px}
+    .contact .sec-label{margin:0 auto 20px}
+    .contact h2{font-size:clamp(2.2rem,4vw,3rem);font-weight:400;margin-bottom:20px}
+    .contact p{color:#ccc;font-size:1rem;max-width:550px;margin:0 auto 16px}
+    .contact-info{color:var(--muted);font-size:.95rem;margin-top:32px}
+    .contact-info a{color:var(--accent);transition:opacity .3s}
+    .contact-info a:hover{opacity:.7}
+
+    /* Footer */
+    footer{padding:32px 48px;border-top:1px solid var(--border);text-align:center;font-size:.85rem;color:var(--dim)}
+
+    @media(max-width:1024px){
+      .hero-container{grid-template-columns:1fr}
+      .hero-visual{margin-top:60px}
+      .case-grid,.content-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:768px){
+      section,.hero,.contact{padding:60px 24px}
+      .photo-card{width:280px;height:350px}
+      .gallery{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-  <div class="noise"></div>
 
-  <div class="nav-shell">
-    <div class="nav">
-      <div class="nav-left">
-        <div class="nav-logo">S</div>
-        <div class="nav-title">
-          <span>Sanal Pillai</span>
-          <span>Product Marketing & Growth</span>
-        </div>
+<!-- Swoosh BG -->
+<div class="swoosh">
+  <svg viewBox="0 0 1400 600" preserveAspectRatio="none">
+    <path d="M-100,300 Q200,100 500,300 T1100,250 T1500,300" />
+    <path d="M-100,350 Q300,150 600,350 T1200,300 T1600,350" />
+  </svg>
+</div>
+
+<!-- Nav -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon"><span></span><span></span></div>
+    Sanal Pillai
+  </div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#case-studies">Case Studies</a>
+    <a href="#content">Content</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+    Get in Touch
+  </a>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="overview">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="status">
+        <span class="status-dot"></span>
+        available for work
       </div>
-      <div class="nav-links">
-        <a class="nav-link" href="#overview">Overview</a>
-        <a class="nav-link" href="#case-studies">Case Studies</a>
-        <a class="nav-link" href="#content">Content & Design</a>
-        <a class="nav-link" href="#contact">Contact</a>
+      <h1>Turning intent into<br><span class="serif">predictable revenue</span></h1>
+      <p class="hero-desc">Senior Product Marketing and Growth professional across B2B SaaS, marketplaces, HealthTech, and consumer platforms — combining positioning, SEO‑led acquisition, PLG, and content to build motions that compound.</p>
+      <div class="hero-btns">
+        <a href="#case-studies" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+          View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          Get Started
+        </a>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/sanalpillai97" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <span class="social-div">|</span>
+        <a href="mailto:sanalpillai6297@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6L12 13 2 6"/></svg>
+        </a>
+        <span class="social-div">|</span>
+        <a href="https://drive.google.com/drive/folders/1mI5Za33s14oMwNhJbgHtw3sOiCP2t979" target="_blank" aria-label="Portfolio">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="photo-card">
+        <!-- Replace with your photo URL -->
+        <img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/images/faceshot_ai.png" alt="Sanal Pillai" />
+      </div>
+      <div class="rotating-badge">
+        <svg viewBox="0 0 100 100">
+          <defs>
+            <path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/>
+          </defs>
+          <text><textPath href="#circle">• TRUSTED PMM • YOUR GROWTH PARTNER </textPath></text>
+        </svg>
+      </div>
+      <div class="stars-row">
+        <span class="stars">★★★★★</span>
+        <span class="stars-text">Results across 40+ brands</span>
       </div>
     </div>
   </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-  <main class="page">
-    <!-- HERO -->
-    <section class="hero" id="overview">
-      <div class="hero-text">
-        <div class="hero-eyebrow">Product marketing · Growth · Design</div>
-        <h1 class="hero-title">
-          Turning intent into <span class="highlight">predictable revenue</span> and distinctive stories.
-        </h1>
-        <p class="hero-subtitle">
-          Senior Product Marketing and Growth professional across B2B SaaS, marketplaces, HealthTech, and consumer platforms – combining positioning, SEO‑led acquisition, PLG, and content to build motions that compound.
-        </p>
-        <p class="hero-meta">
-          Treats channels and launches as products with ownership, metrics, and roadmaps, while staying hands‑on across copy, creative, and experimentation.
-        </p>
-        <div class="hero-ctas">
-          <a class="btn-primary" href="#case-studies">View case studies</a>
-          <a class="btn-outline" href="#content">See design & content</a>
-        </div>
-        <div class="hero-tags">
-          <span class="tag">GTM strategy & launches</span>
-          <span class="tag">SEO / AEO / GEO</span>
-          <span class="tag">Demand & lifecycle</span>
-          <span class="tag">PLG & onboarding</span>
-          <span class="tag">Sales enablement</span>
-        </div>
+<!-- Marquee -->
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>GTM strategy & launches</span><span>SEO / AEO / GEO</span><span>Demand & lifecycle</span><span>PLG & onboarding</span><span>Sales enablement</span><span>Content Strategy</span><span>A/B Testing</span><span>Analytics</span>
+    <span>GTM strategy & launches</span><span>SEO / AEO / GEO</span><span>Demand & lifecycle</span><span>PLG & onboarding</span><span>Sales enablement</span><span>Content Strategy</span><span>A/B Testing</span><span>Analytics</span>
+  </div>
+</div>
+
+<!-- Case Studies -->
+<section id="case-studies">
+  <div class="container">
+    <div class="sec-header anim">
+      <div>
+        <span class="sec-label">Case Studies</span>
+        <h2 class="sec-title">Selected <span class="serif">Work</span></h2>
       </div>
-
-      <aside class="hero-media">
-        <div class="hero-media-top">
-          <div class="hero-screen-main">
-            <div class="hero-screen-overlay"></div>
-            <div class="hero-screen-content">
-              <div>
-                <strong>Impact Guru · HealthTech</strong><br />
-                SEO‑led growth engine for healthcare fundraising.
-              </div>
-              <div>
-                400%+ organic traffic · $240K+/month SEO revenue · SEO as a board‑level GTM pillar.
-              </div>
-            </div>
-          </div>
-          <div class="hero-screen-side">
-            <div class="hero-screen-overlay"></div>
-            <div class="hero-screen-content">
-              <div>
-                Multi‑client GTM & growth programs for 40+ brands across healthcare, ecommerce, and marketplaces.
-              </div>
-              <div>
-                Positioning, messaging, experimentation, and reporting – all wired to ARR and funnel lift.
-              </div>
-            </div>
-          </div>
+      <p class="sec-sub">HealthTech, multi‑client GTM, and PLG.</p>
+    </div>
+    <div class="case-grid">
+      <!-- Case 1 -->
+      <article class="case-card anim d1">
+        <div class="case-img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         </div>
-        <div class="hero-metrics-row">
-          <div class="hero-metric">
-            <span class="value">400%+</span>
-            Organic traffic growth for healthcare fundraising programs.
+        <div class="case-body">
+          <div class="case-title">SEO‑Led Growth Engine</div>
+          <div class="case-meta">Impact Guru · HealthTech crowdfunding</div>
+          <div class="case-label">Problem</div>
+          <ul><li>Organic acquisition fragmented with no revenue owner.</li></ul>
+          <div class="case-label">Strategy</div>
+          <ul><li>Reframed SEO as a product growth channel with metrics.</li></ul>
+          <div class="case-label">Execution</div>
+          <ul>
+            <li>Owned technical, content, and experimentation end‑to‑end.</li>
+            <li>Built SEO, SEM, and content teams (50+ contributors).</li>
+            <li>Implemented revenue‑tied reporting.</li>
+          </ul>
+          <div class="metrics">
+            <span class="metric"><span>400%+</span> traffic</span>
+            <span class="metric"><span>$240K/mo</span> revenue</span>
+            <span class="metric"><span>Board-level</span> GTM</span>
           </div>
-          <div class="hero-metric">
-            <span class="value">$240K+/mo</span>
-            SEO‑led revenue within four months as a growth engine.
-          </div>
-          <div class="hero-metric">
-            <span class="value">+18%</span>
-            Trial‑to‑paid activation uplift via PLG and onboarding experiments.
-          </div>
+          <p class="case-note">Key learning: SEO performs best with ownership and revenue accountability.</p>
         </div>
-      </aside>
-    </section>
-
-    <!-- CASE STUDIES -->
-    <section class="section" id="case-studies">
-      <div class="section-header">
-        <div class="section-label">Case Studies</div>
-        <div class="section-sub">Selected work across HealthTech, multi‑client GTM, and PLG.</div>
-      </div>
-
-      <div class="case-grid">
-        <!-- Case 1 -->
-        <article class="case-card">
-          <div class="case-image" style="background-image:url('https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
-          <div class="case-body">
-            <div class="case-title">SEO‑Led Acquisition as a Product Growth Engine</div>
-            <div class="case-meta">Impact Guru · HealthTech crowdfunding</div>
-
-            <div class="case-label">Problem</div>
-            <ul>
-              <li>Organic acquisition fragmented and under‑leveraged, with no owner accountable for revenue.</li>
-            </ul>
-
-            <div class="case-label">Strategy</div>
-            <ul>
-              <li>Reframed SEO as a product growth channel with clear metrics and experimentation roadmap.</li>
-            </ul>
-
-            <div class="case-label">Execution</div>
-            <ul>
-              <li>Owned technical, content, and experimentation tracks end‑to‑end.</li>
-              <li>Partnered with engineering on architecture, indexing, and performance.</li>
-              <li>Built and led SEO, SEM, and content teams (50+ contributors).</li>
-              <li>Implemented weekly and monthly revenue‑tied reporting.</li>
-            </ul>
-
-            <div class="metric-row">
-              <span class="metric-chip"><span class="value">400%+</span> organic traffic growth.</span>
-              <span class="metric-chip"><span class="value">$240K+/mo</span> SEO revenue in four months.</span>
-              <span class="metric-chip"><span class="value">GTM pillar</span> SEO elevated to board‑level motion.</span>
-            </div>
-
-            <p class="meta-small">
-              Key learning: SEO performs best when treated as a product with ownership, experiment velocity, and revenue accountability.
-            </p>
-          </div>
-        </article>
-
-        <!-- Case 2 -->
-        <article class="case-card">
-          <div class="case-image" style="background-image:url('https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
-          <div class="case-body">
-            <div class="case-title">Multi‑Client GTM & Growth Enablement</div>
-            <div class="case-meta">Avanzar Health / GX Partners · 40+ clients</div>
-
-            <div class="case-label">Problem</div>
-            <ul>
-              <li>Clients lacked clear positioning, consistent messaging, and channel‑to‑conversion alignment.</li>
-            </ul>
-
-            <div class="case-label">Strategy</div>
-            <ul>
-              <li>Standardized GTM frameworks across SEO, SEM, and content, tied directly to ICPs, funnels, and outcomes.</li>
-            </ul>
-
-            <div class="case-label">Execution</div>
-            <ul>
-              <li>Led GTM and growth programs across healthcare, ecommerce, and marketplaces.</li>
-              <li>Defined positioning and messaging aligned to search intent and buyer stages.</li>
-              <li>Owned analytics, dashboards, and executive‑ready reporting.</li>
-              <li>Acted as escalation point for performance, quality, and timelines.</li>
-            </ul>
-
-            <div class="metric-row">
-              <span class="metric-chip"><span class="value">40%+ ARR</span> growth for key accounts.</span>
-              <span class="metric-chip"><span class="value">Consistent</span> traffic, ranking, and CTR lift.</span>
-            </div>
-
-            <p class="meta-small">
-              Key learning: positioning and GTM discipline matter as much as channel execution, especially at scale.
-            </p>
-          </div>
-        </article>
-
-        <!-- Case 3 -->
-        <article class="case-card">
-          <div class="case-image" style="background-image:url('https://images.pexels.com/photos/5935793/pexels-photo-5935793.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
-          <div class="case-body">
-            <div class="case-title">Product‑Led Growth & Experimentation</div>
-            <div class="case-meta">METY Tech · SaaS</div>
-
-            <div class="case-label">Problem</div>
-            <ul>
-              <li>Low trial‑to‑paid conversion and unclear activation signals in onboarding.</li>
-            </ul>
-
-            <div class="case-label">Strategy</div>
-            <ul>
-              <li>Applied PLG principles to onboarding, messaging, and activation triggers.</li>
-            </ul>
-
-            <div class="case-label">Execution</div>
-            <ul>
-              <li>Mapped activation events with product and engineering.</li>
-              <li>Ran A/B tests on copy, flows, and prompts.</li>
-              <li>Used behavioral analytics to refine lifecycle messaging.</li>
-            </ul>
-
-            <div class="metric-row">
-              <span class="metric-chip"><span class="value">+18%</span> trial‑to‑paid activation.</span>
-              <span class="metric-chip"><span class="value">More PQLs</span> via clearer value communication.</span>
-            </div>
-
-            <p class="meta-small">
-              Key learning: product marketing is most effective when embedded directly into the product experience.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONTENT & DESIGN -->
-    <section class="section alt" id="content">
-      <div class="section-header">
-        <div class="section-label">Content & Design</div>
-        <div class="section-sub">YouTube, product imagery, ad creatives, and graphic systems.</div>
-      </div>
-
-      <div class="grid-2">
-        <div>
-          <h3>Hands‑on creative & distribution</h3>
-          <p>
-            Blends product marketing and analytics with hands‑on content creation for brands like Bombay Shirt Company and Impact Guru – from thumbnails and reels to product imagery and performance ads.
-          </p>
-          <p>
-            Grew a YouTube channel to 1K+ subscribers and 400K+ views, using data‑backed topics, visuals, and retention experiments to drive consistent growth.
-          </p>
-
-          <div style="margin-top:12px;display:flex;flex-direction:column;gap:10px;">
-            <div class="link-card">
-              <span>YouTube videos, edited content, and reel samples.</span>
-              <a href="https://drive.google.com/drive/folders/1qnF0w_8PKll9nVHYEW4WGLhAnV1MR8gl?usp=sharing" target="_blank" rel="noreferrer">YouTube & Reels</a>
-            </div>
-            <div class="link-card">
-              <span>Product imagery across ecommerce and performance campaigns.</span>
-              <a href="https://drive.google.com/drive/folders/1CGAbm9bKpmbAYzJ80IzFjwUuGHtOfOdQ?usp=sharing" target="_blank" rel="noreferrer">Product Shots</a>
-            </div>
-            <div class="link-card">
-              <span>Ad creative samples across formats and funnel stages.</span>
-              <a href="https://drive.google.com/drive/folders/1BhBKa2KzcJxBZ8eWCXsi-SjdWFby1Ga2?usp=sharing" target="_blank" rel="noreferrer">Ad Creatives</a>
-            </div>
-            <div class="link-card">
-              <span>Full graphic and media portfolio.</span>
-              <a href="https://drive.google.com/drive/folders/1mI5Za33s14oMwNhJbgHtw3sOiCP2t979?usp=drive_link" target="_blank" rel="noreferrer">Full Portfolio</a>
-            </div>
-          </div>
+      </article>
+      <!-- Case 2 -->
+      <article class="case-card anim d2">
+        <div class="case-img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
         </div>
-
-        <div>
-          <h3>Visual gallery</h3>
-          <p class="meta-small">
-            Representative imagery using free illustration photography to mirror final creative systems.
-          </p>
-          <div class="gallery-strip">
-            <div class="gallery-item" style="background-image:url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800');">
-              <div class="gallery-overlay"></div>
-              <div class="gallery-label">Healthcare fundraising dashboards</div>
-            </div>
-            <div class="gallery-item" style="background-image:url('https://images.pexels.com/photos/1181468/pexels-photo-1181468.jpeg?auto=compress&cs=tinysrgb&w=800');">
-              <div class="gallery-overlay"></div>
-              <div class="gallery-label">Ecommerce product imagery</div>
-            </div>
-            <div class="gallery-item" style="background-image:url('https://images.pexels.com/photos/6476586/pexels-photo-6476586.jpeg?auto=compress&cs=tinysrgb&w=800');">
-              <div class="gallery-overlay"></div>
-              <div class="gallery-label">Ad creative directions</div>
-            </div>
-            <div class="gallery-item" style="background-image:url('https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=800');">
-              <div class="gallery-overlay"></div>
-              <div class="gallery-label">Content & distribution systems</div>
-            </div>
+        <div class="case-body">
+          <div class="case-title">Multi‑Client GTM Programs</div>
+          <div class="case-meta">Avanzar Health / GX Partners · 40+ clients</div>
+          <div class="case-label">Problem</div>
+          <ul><li>Clients lacked positioning and channel alignment.</li></ul>
+          <div class="case-label">Strategy</div>
+          <ul><li>Standardized GTM frameworks tied to ICPs and outcomes.</li></ul>
+          <div class="case-label">Execution</div>
+          <ul>
+            <li>Led programs across healthcare, ecommerce, marketplaces.</li>
+            <li>Owned analytics and executive reporting.</li>
+            <li>Escalation point for performance and timelines.</li>
+          </ul>
+          <div class="metrics">
+            <span class="metric"><span>40%+</span> ARR growth</span>
+            <span class="metric"><span>Consistent</span> CTR lift</span>
           </div>
+          <p class="case-note">Key learning: GTM discipline matters as much as channel execution.</p>
+        </div>
+      </article>
+      <!-- Case 3 -->
+      <article class="case-card anim d3">
+        <div class="case-img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="case-body">
+          <div class="case-title">Product‑Led Growth</div>
+          <div class="case-meta">METY Tech · SaaS</div>
+          <div class="case-label">Problem</div>
+          <ul><li>Low trial‑to‑paid and unclear activation signals.</li></ul>
+          <div class="case-label">Strategy</div>
+          <ul><li>Applied PLG to onboarding and activation triggers.</li></ul>
+          <div class="case-label">Execution</div>
+          <ul>
+            <li>Mapped activation events with product team.</li>
+            <li>Ran A/B tests on copy and flows.</li>
+            <li>Refined lifecycle messaging with analytics.</li>
+          </ul>
+          <div class="metrics">
+            <span class="metric"><span>+18%</span> activation</span>
+            <span class="metric"><span>More</span> PQLs</span>
+          </div>
+          <p class="case-note">Key learning: PMM is most effective embedded in the product.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-          <h3 style="margin-top:14px;">Tools & stack</h3>
-          <div class="pill-row">
-            <span class="pill">Google Analytics</span>
-            <span class="pill">Search Console</span>
-            <span class="pill">Looker / Data Studio</span>
-            <span class="pill">Semrush</span>
-            <span class="pill">Ahrefs</span>
-            <span class="pill">Screaming Frog</span>
-            <span class="pill">Canva</span>
-            <span class="pill">Figma</span>
-            <span class="pill">SQL (basic)</span>
-            <span class="pill">A/B testing platforms</span>
+<!-- Content & Design -->
+<section id="content">
+  <div class="container">
+    <div class="sec-header anim">
+      <div>
+        <span class="sec-label">Content & Design</span>
+        <h2 class="sec-title">Creative <span class="serif">Portfolio</span></h2>
+      </div>
+      <p class="sec-sub">YouTube, product imagery, ad creatives, and graphics.</p>
+    </div>
+    <div class="content-grid">
+      <div class="content-block anim d1">
+        <h3>Hands‑on creative & distribution</h3>
+        <p>Blends product marketing and analytics with hands‑on content creation for brands like Bombay Shirt Company and Impact Guru — from thumbnails and reels to product imagery and performance ads.</p>
+        <p>Grew a YouTube channel to 1K+ subscribers and 400K+ views, using data‑backed topics, visuals, and retention experiments.</p>
+        <div class="link-cards">
+          <div class="link-card">
+            <span>YouTube videos and reel samples</span>
+            <a href="https://drive.google.com/drive/folders/1qnF0w_8PKll9nVHYEW4WGLhAnV1MR8gl" target="_blank">View →</a>
+          </div>
+          <div class="link-card">
+            <span>Product imagery for ecommerce</span>
+            <a href="https://drive.google.com/drive/folders/1CGAbm9bKpmbAYzJ80IzFjwUuGHtOfOdQ" target="_blank">View →</a>
+          </div>
+          <div class="link-card">
+            <span>Ad creatives across formats</span>
+            <a href="https://drive.google.com/drive/folders/1BhBKa2KzcJxBZ8eWCXsi-SjdWFby1Ga2" target="_blank">View →</a>
+          </div>
+          <div class="link-card">
+            <span>Full graphic portfolio</span>
+            <a href="https://drive.google.com/drive/folders/1mI5Za33s14oMwNhJbgHtw3sOiCP2t979" target="_blank">View →</a>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- PMM OWNERSHIP -->
-    <section class="section">
-      <div class="section-header">
-        <div class="section-label">End‑to‑End PMM Ownership</div>
-        <div class="section-sub">How work typically runs.</div>
+      <div class="content-block anim d2">
+        <h3>Visual gallery</h3>
+        <p style="font-size:.85rem;color:var(--muted)">Representative work across creative systems.</p>
+        <div class="gallery">
+          <div class="gallery-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <span>Dashboards</span>
+          </div>
+          <div class="gallery-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+            <span>Product shots</span>
+          </div>
+          <div class="gallery-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <span>Ad creatives</span>
+          </div>
+          <div class="gallery-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            <span>Video content</span>
+          </div>
+        </div>
+        <h3 style="margin-top:28px">Tools & stack</h3>
+        <div class="pills">
+          <span class="pill">Google Analytics</span>
+          <span class="pill">Search Console</span>
+          <span class="pill">Looker Studio</span>
+          <span class="pill">Semrush</span>
+          <span class="pill">Ahrefs</span>
+          <span class="pill">Screaming Frog</span>
+          <span class="pill">Canva</span>
+          <span class="pill">Figma</span>
+          <span class="pill">SQL</span>
+          <span class="pill">A/B Testing</span>
+        </div>
       </div>
-      <p>
-        Owns the full product marketing lifecycle from market understanding to GTM, sales enablement, experimentation, and executive reporting.
-      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PMM Ownership -->
+<section>
+  <div class="container">
+    <div class="pmm-card anim">
+      <span class="sec-label">End‑to‑End PMM Ownership</span>
+      <h3>How work typically runs</h3>
+      <p>Owns the full product marketing lifecycle from market understanding to GTM, sales enablement, experimentation, and executive reporting.</p>
       <ul>
         <li>Market and user understanding, ICP definition, and intent mapping.</li>
-        <li>Positioning, messaging, and narrative development across segments and stages.</li>
-        <li>GTM planning and launches across SEO, SEM, content, and lifecycle programs.</li>
-        <li>Sales enablement and pricing narratives anchored to net revenue and time‑to‑value.</li>
+        <li>Positioning, messaging, and narrative development across segments.</li>
+        <li>GTM planning and launches across SEO, SEM, content, lifecycle.</li>
+        <li>Sales enablement and pricing anchored to net revenue.</li>
         <li>Distribution, experimentation, and continuous optimization.</li>
         <li>Executive communication, reporting, and roadmap influence.</li>
       </ul>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- CONTACT -->
-    <section class="section alt" id="contact">
-      <div class="section-header">
-        <div class="section-label">Contact</div>
-        <div class="section-sub">Open to PMM, growth, and GTM roles and projects.</div>
-      </div>
-      <p>
-        Ideal fit: environments where SEO, PLG, experimentation, and clear storytelling are core to winning markets and aligning product, sales, and leadership.
-      </p>
-      <p class="meta-small">
-        Email: <a href="mailto:sanalpillai6297@gmail.com">sanalpillai6297@gmail.com</a><br />
-        Phone: +1 857‑693‑9118<br />
-        LinkedIn: <a href="https://www.linkedin.com/in/sanalpillai97" target="_blank" rel="noreferrer">linkedin.com/in/sanalpillai97</a>
-      </p>
-    </section>
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="container anim">
+    <span class="sec-label">Contact</span>
+    <h2>Let's Stay <span class="serif">Connected</span></h2>
+    <p>Open to PMM, growth, and GTM roles and projects.</p>
+    <p>Ideal fit: environments where SEO, PLG, experimentation, and clear storytelling are core to winning markets.</p>
+    <div class="contact-info">
+      Email: <a href="mailto:sanalpillai6297@gmail.com">sanalpillai6297@gmail.com</a><br>
+      Phone: +1 857‑693‑9118<br>
+      LinkedIn: <a href="https://www.linkedin.com/in/sanalpillai97" target="_blank">linkedin.com/in/sanalpillai97</a>
+    </div>
+  </div>
+</section>
 
-    <footer>
-      © <span id="year"></span> Sanal Pillai · Product Marketing & Growth
-    </footer>
-  </main>
+<footer>© <span id="year"></span> Sanal Pillai · Product Marketing & Growth</footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>
