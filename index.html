@@ -188,16 +188,10 @@
     .gallery-row{display:flex;gap:12px;animation:scroll 35s linear infinite;width:max-content}
     .gallery-row:hover{animation-play-state:paused}
     @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-    .gallery-item{flex-shrink:0;width:220px;height:140px;border-radius:12px;overflow:hidden;border:1px solid var(--border);transition:all .3s;position:relative;background:var(--card2);display:flex;align-items:center;justify-content:center}
-    .gallery-item:hover{border-color:var(--green);transform:scale(1.02)}
-    .gallery-item svg{width:40px;height:40px;opacity:.5}
-    .gallery-item.cyan svg{stroke:var(--cyan)}
-    .gallery-item.pink svg{stroke:var(--pink)}
-    .gallery-item.orange svg{stroke:var(--orange)}
-    .gallery-item.purple svg{stroke:var(--purple)}
-    .gallery-item.green svg{stroke:var(--green)}
-    .gallery-item.yellow svg{stroke:var(--yellow)}
-    .gallery-item .label{position:absolute;bottom:8px;left:10px;padding:4px 8px;background:rgba(0,0,0,.7);border-radius:6px;font-size:.65rem;color:var(--muted)}
+    .gallery-item{flex-shrink:0;width:240px;height:150px;border-radius:12px;overflow:hidden;border:1px solid var(--border);transition:all .3s;position:relative;background:var(--card2)}
+    .gallery-item:hover{border-color:var(--green);transform:scale(1.03)}
+    .gallery-item img{width:100%;height:100%;object-fit:cover}
+    .gallery-item .label{position:absolute;bottom:8px;left:10px;padding:4px 10px;background:rgba(0,0,0,.8);border-radius:6px;font-size:.65rem;color:var(--muted)}
 
     .tools-section{background:linear-gradient(180deg,transparent,rgba(56,189,248,.02),transparent)}
     .tool-category{margin-bottom:24px}
@@ -254,6 +248,7 @@
       .contact-info{flex-direction:column;gap:16px}
       footer{flex-direction:column;text-align:center}
       .gallery-item{width:180px;height:110px}
+      .video-row{grid-template-columns:1fr !important}
     }
     @media(max-width:480px){
       .perf-grid{grid-template-columns:1fr 1fr}
@@ -510,18 +505,40 @@
     </div>
     <div class="creative-gallery anim">
       <div class="gallery-row">
-        <div class="gallery-item cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span class="label">Dashboards</span></div>
-        <div class="gallery-item pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span class="label">YouTube</span></div>
-        <div class="gallery-item orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg><span class="label">Product Shots</span></div>
-        <div class="gallery-item purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="label">Ad Creatives</span></div>
-        <div class="gallery-item green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg><span class="label">Social Media</span></div>
-        <div class="gallery-item yellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span class="label">Documents</span></div>
-        <div class="gallery-item cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span class="label">Dashboards</span></div>
-        <div class="gallery-item pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span class="label">YouTube</span></div>
-        <div class="gallery-item orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg><span class="label">Product Shots</span></div>
-        <div class="gallery-item purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="label">Ad Creatives</span></div>
-        <div class="gallery-item green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg><span class="label">Social Media</span></div>
-        <div class="gallery-item yellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span class="label">Documents</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/display-ad-creative-1.png" alt="Display Ad"/><span class="label">Display Ad</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/youtube-thumbnail-1.png" alt="YouTube"/><span class="label">YouTube</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/product-creative-1.png" alt="Product"/><span class="label">Product</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/display-ad-creative-2.png" alt="Display Ad"/><span class="label">Display Ad</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/youtube-thumbnail-2.png" alt="YouTube"/><span class="label">YouTube</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/product-creative-2.png" alt="Product"/><span class="label">Product</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/youtube-thumbnail-3.png" alt="YouTube"/><span class="label">YouTube</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/event-banner-1.png" alt="Event"/><span class="label">Event</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/product-creative-3.png" alt="Product"/><span class="label">Product</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/youtube-thumbnail-4.png" alt="YouTube"/><span class="label">YouTube</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/display-ad-creative-1.png" alt="Display Ad"/><span class="label">Display Ad</span></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/youtube-thumbnail-1.png" alt="YouTube"/><span class="label">YouTube</span></div>
+      </div>
+    </div>
+    
+    <!-- Video Section -->
+    <div class="video-row anim" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px">
+      <div class="video-card" style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden">
+        <div style="padding:12px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span style="font-size:.85rem;font-weight:500">YouTube</span>
+        </div>
+        <div style="position:relative;padding-bottom:56.25%;height:0">
+          <iframe src="https://www.youtube.com/embed/0mpXnUGYg00" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="video-card" style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden">
+        <div style="padding:12px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)">
+          <svg viewBox="0 0 24 24" width="20" height="20"><defs><linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#4f5bd5"/></linearGradient></defs><path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          <span style="font-size:.85rem;font-weight:500">Instagram Reel</span>
+        </div>
+        <div style="position:relative;padding-bottom:56.25%;height:0">
+          <iframe src="https://www.instagram.com/reel/DTNI4iSiDlC/embed" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
